@@ -44,7 +44,7 @@ func ReadConfig()  Config{
 	if strings.Compare(os,"windows")==0{
 		path = "C:\\work\\go\\huzhouserver\\src\\config\\"+ConfigPath
 	}else {
-		path = "/etc/huzhou/config/"+ConfigPath
+		path = "/root/work/go/huzhouserver/src/config/"+ConfigPath
 	}
 
 	file,err:=ioutil.ReadFile(path)

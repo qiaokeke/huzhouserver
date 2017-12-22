@@ -26,7 +26,7 @@ func main()  {
 	 */
 
 	port := config.ReadConfig().Port
-
+	log.Println(port)
 	listener,err := net.Listen("tcp",""+":"+port)
 	defer listener.Close()
 	if err!=nil{
