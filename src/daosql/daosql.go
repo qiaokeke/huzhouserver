@@ -9,7 +9,7 @@ import (
 	"config"
 )
 
-func Insert(li *list.List)  {
+func Insert(li *list.List,dataSource string)  {
 	defer func() {
 		if x := recover();x!=nil{
 			log.Println("inset,err,flag")
@@ -26,9 +26,9 @@ func Insert(li *list.List)  {
 	sqlstring = sqlstring[:len(sqlstring)-1] + ")"
 	log.Println(sqlstring)
 
-	datasource:=config.ReadConfig().DataSource;
+	//datasource:=config.ReadConfig().DataSource;
 	// sqlstring += log.Sprintf("values(%v)",li)
-	db, e:= sql.Open("mysql", datasource)
+	db, e:= sql.Open("mysql", dataSource)
 	db.SetMaxIdleConns(1000)
 	defer db.Close()
 	if e!=nil{

@@ -44,6 +44,7 @@
     ]
   ],
   "datasource":"root:Aa651830@tcp(127.0.0.1:3306)/huzhou?charset=utf8",
+  "datasource2":"root:cecepJX#2018DB@tcp(127.0.0.1:3306)/huzhou?charset=utf8",
   "meterIds":{
     "1":"29"
   }

@@ -23,6 +23,7 @@ type Config struct {
 	Cmds [][][]byte
 	MeterIds map[string] string
 	DataSource string
+	DataSource2 string
 }
 
 func InitData(path string)  {

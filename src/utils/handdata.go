@@ -27,7 +27,8 @@ func HandData(num byte)  bool{
 			fmt.Print(e.Value) //输出list的值,01234
 		}
 		//写入数据库
-		daosql.Insert(l1)
+		daosql.Insert(l1,config.ReadConfig().DataSource)
+		daosql.Insert(l1,config.ReadConfig().DataSource2)
 		defer func() {
 			if x := recover();x!=nil{
 				fmt.Println("inset,err,flag")
