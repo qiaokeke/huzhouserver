@@ -6,7 +6,6 @@ import (
 	_ "github.com/go-sql-driver/mysql"
 	"container/list"
 	"fmt"
-	"config"
 )
 
 func Insert(li *list.List,dataSource string)  {

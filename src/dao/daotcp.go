@@ -98,10 +98,6 @@ func HandleRead(conn net.Conn)  {
 		fmt.Printf("heart:% X\n",recvbytes)
 		time.Sleep(1*time.Second)
 	}
-
-
-
-
 }
 
 /**

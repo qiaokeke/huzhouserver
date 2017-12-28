@@ -13,7 +13,7 @@ func main()  {
 	/**
 	全局map,保存读出的数据
 	 */
-
+	log.Println("water")
 	configPath:=os.Args[1]
 	log.Println(configPath)
 
@@ -38,8 +38,8 @@ func main()  {
 			break
 		}
 		log.Println("connect from :",conn.RemoteAddr(),conn.LocalAddr())
-		go dao.HandleRead(conn)
-		go dao.HandleWrite(conn)
+		go dao.HandleReadWater(conn)
+		go dao.HandleWriteWater(conn)
 	}
 
 
